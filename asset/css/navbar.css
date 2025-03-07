@@ -16,6 +16,7 @@
     digunakan untuk menentukan gaya garis yang mengelilingi elemen. */
     border: none; /* border adalah properti CSS yang digunakan untuk menentukan gaya, lebar, dan warna garis elemen. */
     text-decoration: none; /* text-decoration adalah properti CSS yang digunakan untuk mengatur dekorasi teks elemen. */
+    font-family: 'Times New Roman', Times, serif; /* jenis font */
 }
 
 /* Body */
@@ -28,6 +29,7 @@ body {
     memungkinkan untuk menentukan model kotak yang digunakan oleh browser untuk menghitung dimensi elemen */
     background: var(--primary-color);
     color: var(--text-color); 
+    min-height: 2000px; /* tinggi minimum 2000px */
 }
 
 /* Navbar */
@@ -128,7 +130,7 @@ body {
     width: 100%; /* lebar 100% */
     height: 20%; /* tinggi 100% */
     bottom: 0; /* jarak dari bawah */
-    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(225, 225, 225, 0) 50%); /* gradient background */
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(225, 225, 225, 0) 100%); /* gradient background */
 }
 
 /* Hero Content */
@@ -168,4 +170,152 @@ body {
     background-color: var(--accent-color); /* warna background */
     border-radius: 1rem; /* border radius */
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); /* shadow */
+}
+
+/* About Section */
+.about {
+    padding: 6rem 7% 1.4rem; /* 6 x 16px = 96px, 7% x 16px = 112px, 1.4 x 16px = 22.4px */
+}
+
+/* About Title */
+.about h2 {
+    font-size: 2.6em; /* ukuran font 2.5em * 16px = 40px */
+    font-family: 'Times New Roman', serif; /* jenis font */
+    text-align: center; /* posisi teks */
+    margin-bottom: 3rem; /* jarak dari bawah */
+}
+
+.about h2 span {
+    color: var(--accent-color); /* warna font */
+}
+
+.about .row {
+    display: flex; /* properti yang memungkinkan pengaturan layout, posisi, dan tampilan konten secara fleksibel*/
+}
+
+.about .row about-img {
+    flex: 1 1 45rem; /* flex: 1 digunakan untuk memberikan elemen ruang yang sama */
+}
+
+.about .row about-img img {
+    width: 50px; /* lebar 100% */
+}
+
+.about .row .content {
+    flex: 1 1 35rem; /* flex: 1 digunakan untuk memberikan elemen ruang yang sama */
+    padding: 0 1rem; /* 0 x 16px = 0px, 1 x 16px = 16px */
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem; /* ukuran font 1.8em * 16px = 28.8px */
+    margin-bottom: 1rem; /* jarak dari bawah */
+}
+
+.about .row .content p {
+    font-size: 1.4rem; /* ukuran font 1.4em * 16px = 22.4px */
+    font-weight: 100; /* ketebalan font */
+    margin-bottom: 0.8rem; /* jarak dari bawah */
+    line-height: 1.6; /* jarak antar baris */
+}
+
+/* Biodata */
+.biodata {
+    text-align: center;
+    padding: 6rem 7% 1.4rem; /* 6 x 16px = 96px, 7% x 16px = 112px, 1.4 x 16px = 22.4px */
+    background: linear-gradient(to bottom, #1a1a1a, #000);
+    color: #fff;
+}
+
+.biodata span {
+    color: var(--accent-color);
+}
+
+.biodata h2 {
+    font-size: 32px;
+    font-family: 'Times New Roman', serif;
+    color: #fff;
+    text-transform: uppercase; /* text-transform adalah properti CSS yang digunakan untuk mengubah teks menjadi huruf besar atau huruf kecil */
+    letter-spacing: 2px; /* letter-spacing adalah properti CSS yang digunakan untuk menentukan jarak antara karakter dalam teks */
+}
+
+.biodata-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.biodata-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--secondary-color);
+    width: 50%;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek Cahaya Elegan */
+.biodata-card::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 254, 254, 0.1); /* warna transparan */
+    z-index: -1; /* z-index adalah properti CSS yang menentukan urutan tumpukan elemen. */
+    border-radius: 14px;
+}
+
+/* Header Styling */
+.biodata-header p {
+    font-style: italic;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Content Styling */
+.biodata-content ul {
+    list-style: none; /* Menghilangkan tanda daftar */
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column; /* flex-direction adalah properti CSS yang digunakan untuk menentukan arah item dalam kontainer flex */
+    align-items: center; /* properti yang digunakan untuk memusatkan teks atau elemen ke tengah */
+    gap: 8px; /* jarak antar elemen */
+}
+
+.biodata-content ul li {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 80%;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.biodata-content ul li span {
+    font-size: 20px;
+}
+
+/* Efek Hover */
+.biodata-card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+.biodata-content ul li:hover {
+    background: var(--accent-color);
+    color: #111;
+    transform: translateX(5px); /* efek hover pada item */
 }
